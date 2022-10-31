@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React from "react";
+import "./App.css";
+import { HomePag } from "./Component/HomePage";
+import CountDown from "./Component/Countdown/command";
+import Commands from "./Component/Pointer/commands";
+import { Switch, Route } from "react-router-dom";
+import GoToTop from "../src/Component/Pagination/GoToTop";
+import Beema from "../src/Component/Beema/index";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <React.Fragment>
+        <Switch>
+          <Route path="/Pointer" component={Commands} />
+          <Route path="/CountDown" component={CountDown} />
+          <Route path="/Beema" component={Beema} />
+          <Route path="/" component={HomePag} />
+        </Switch>
+        <GoToTop />
+      </React.Fragment>
+    </>
   );
 }
 

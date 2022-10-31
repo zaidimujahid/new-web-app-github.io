@@ -1,0 +1,4 @@
+{
+  "services" : [{ "id" : 1, "title" : "I will landscape your gaden",
+  "thumbnailUrl" :"http://localhost:9000/car.jpg"}]
+}
